@@ -16,7 +16,7 @@ export default function Navbar() {
 
       {/* Menu */}
 
-      <div className="flex text-center items-center">
+      {/* <div className="flex text-center items-center">
         <ul className="flex">
           <li className="p-2">
             <Link href={"#"} className="link">
@@ -36,7 +36,7 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </nav>
   );
 }
