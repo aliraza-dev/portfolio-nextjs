@@ -3,7 +3,7 @@ import Button from "../common/button/button";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col mt-20  mx-auto justify-center text-center">
+    <div className="flex flex-col mt-20  mx-auto justify-center text-center text-dark-gray">
       <div className="text-center justify-center w-full">
         <h1 className="text-5xl font-semibold text-center">Contact</h1>
       </div>

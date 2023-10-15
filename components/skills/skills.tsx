@@ -19,7 +19,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className="flex flex-col mt-20 w-[50%] mx-auto">
+    <div className="flex flex-col mt-20 w-full sm:w-[50%] mx-auto text-dark-gray">
       <div className="text-center justify-center w-full">
         <h1 className="text-5xl font-semibold text-center">Skills</h1>
       </div>
@@ -30,7 +30,7 @@ export default function Skills() {
             skills.map((skill, index) => (
               <li
                 key={index}
-                className="block w-auto p-4 text-center shadow-lg shadow-gray-300 hover:-translate-y-2 transition ease-in-out duration-300 cursor-pointer"
+                className="block w-auto p-4 text-center text-dark-gray shadow-lg shadow-gray-300 hover:-translate-y-2 transition ease-in-out duration-300 cursor-pointer"
               >
                 {skill}
               </li>

@@ -1,26 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Button from "../common/button/button";
-import Modal from "../modals/modal";
 
 function About() {
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const handleResumeDownload = () => {
+    window.location.href = "../../misc/AliRazaResume.pdf";
+  };
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center w-[700px] mx-auto">
-        <h1 className="text-5xl font-semibold text-center">
+      <div className="flex flex-col justify-center items-center w-full sm:w-[700px] mx-auto">
+        <h1 className="text-lg sm:text-5xl font-semibold text-center text-dark-gray">
           Hi, Write good to become a{" "}
           <span className="text-primary-color">Programmer</span>
         </h1>
 
-        <div className="my-8">
+        <div className="my-4 sm:my-8 text-dark-gray text-center">
           <h2 className="text-4xl font-semibild">A Full stack developer</h2>
         </div>
 
-        <div className="my-8 items-center">
-          <p className="items-center">
+        <div className="p-4 sm:p-0 my-4 items-center text-center text-dark-gray">
+          <p className="items-center text-sm sm:text-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero id
             ratione quia doloremque alias fugiat culpa deserunt, voluptatibus
             reprehenderit asperiores obcaecati unde recusandae ad voluptatum
@@ -29,14 +30,10 @@ function About() {
         </div>
 
         {/* Links */}
-        <Button title="Resume" onClick={() => setShowModal(true)} />
+        <div className="mt-4">
+          <Button title="Resume" onClick={handleResumeDownload} blank />
+        </div>
       </div>
-
-      {showModal && (
-        <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-          Some Modal Children
-        </Modal>
-      )}
     </>
   );
 }

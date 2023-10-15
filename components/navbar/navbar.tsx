@@ -6,12 +6,19 @@ export default function Navbar() {
     <nav className="flex p-2 h-32 mx-auto justify-between">
       {/* Brand */}
       <div className="flex justify-center text-center items-center">
-        <h3 className="font-montserrat text-xl ">
+        <h3 className="font-montserrat text-xl hidden sm:block">
           <Link
             href={"#"}
             className="link !text-primary-color !font-bold"
           >{`<Ali Raza />`}</Link>
         </h3>
+
+        <h2 className="font-montserrat text-xl block sm:hidden">
+          <Link
+            href={"#"}
+            className="link !text-primary-color !font-bold"
+          >{`<AR />`}</Link>
+        </h2>
       </div>
 
       {/* Menu */}
